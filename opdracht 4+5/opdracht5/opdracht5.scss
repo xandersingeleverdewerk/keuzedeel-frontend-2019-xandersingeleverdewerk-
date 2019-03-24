@@ -1,0 +1,18 @@
+$colors: (
+        1: black,
+        2: white,
+        3: darkred
+);
+
+
+$width: 100%;
+$text-transform: uppercase;
+$text-align: center;
+
+$text-border-bottom: 4px solid red;
+$font-family1: 'Arial Black', 'Arial Narrow', sans-serif;
+$font-family2: sans-serif;
+$font-family3: 'Arial Narrow', sans-serif;
+$font-family4: 'Arial Narrow', Arial;
+
+@import "style.scss";

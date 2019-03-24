@@ -1,0 +1,197 @@
+$colors: (
+        1: black,
+        2: white,
+        3: darkred
+);
+
+
+$width: 100%;
+$text-transform: uppercase;
+$text-align: center;
+
+$text-border-bottom: 4px solid red;
+$font-family1: 'Arial Black', 'Arial Narrow', sans-serif;
+$font-family2: Arial, sans-serif;
+$font-family3: 'Arial Narrow', sans-serif;
+$font-family4: 'Arial Narrow', Arial;
+
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: $font-family2;
+  margin: 1px - 1px;
+}
+
+h1,h2,p {
+  font-family: $font-family3;
+  margin: 1px - 1px;
+}
+
+#title {
+  color: map-get($colors, 3);
+  font: {
+    family: $font-family1;
+    size: (18px * 2);
+  }
+}
+
+p {
+  margin-bottom: 20px;
+
+}
+
+header {
+  &#header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: header;
+    background-color: #111;
+    color: #fff;
+    padding: 0 2%;
+  }
+}
+
+nav {
+  &#nav {
+    grid-area: nav;
+    display: flex;
+    justify-content: space + "-between";
+    a {
+      color: map-get($colors, 1);
+      text-decoration: none;
+      text-transform: $text-transform;
+      font: {
+        family: $font-family4;
+        weight: bold;
+      }
+    }
+    h1 {
+      display: none;
+    }
+  }
+}
+
+div {
+  &#tutorialList {
+    grid-area: tutorialList;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  &#testList {
+    grid-area: testList;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  &#container {
+    display: grid;
+    grid: {
+      gap: 14px;
+      template-columns: 2fr 23fr 50fr 23fr 2fr;
+      template-rows: auto;
+      template-areas:
+              "header header header header header"
+              ". . nav . ."
+              ". tutorialList information testList ."
+              "aside aside aside aside aside"
+              "footer footer footer footer footer"
+    }
+  }
+}
+
+section {
+  &.testlist-group {
+    color: map-get($colors, 1);
+    font-size: 20px;
+  }
+  &.tutorialList-group {
+    color: map-get($colors, 1);
+    font-size: 20px;
+  }
+  & .testList-heading {
+    background-color: map-get($colors, 3);
+    border-bottom: $text-border-bottom;
+    width: $width;
+    color: #fff;
+    margin: {
+      top: 0;
+      right: auto;
+      bottom: 10px;
+      left: auto;
+    }
+    padding: 5px;
+    font-size: 16px;
+    text-transform: $text-transform;
+    text-align: $text-align;
+  }
+  $child: "heading";
+  & .tutorialList-#{$child} {
+    background-color: map-get($colors, 3);
+    border-bottom: $text-border-bottom;
+    width: $width;
+    color: #fff;
+    margin: {
+      top: 0;
+      right: auto;
+      bottom: 10px;
+      left: auto;
+    }
+    padding: (10px / 2);
+    font-size: 20px - 4;
+    text-transform: $text-transform;
+    text-align: $text-align;
+  }
+}
+
+main {
+  &#information {
+    grid-area: information;
+    article {
+      position: relative;
+      margin-bottom: 20px;
+      & #info {
+        position: absolute;
+        color: map-get($colors, 1);
+        padding: 10px;
+      }
+    }
+  }
+  h1 {
+    text-align: center;
+  }
+}
+
+li {
+  display: flex;
+  margin-bottom: 14px;
+}
+
+asi {
+  &de {
+    grid-area: aside;
+    color: map-get($colors, 1);
+    font-size: 15px;
+    padding: 20px;
+    margin-top: 60px;
+    text-align: center;
+  }
+  &de h2 {
+    display: none
+  }
+}
+
+footer {
+  grid-area: footer;
+  background-color: #222;
+  color: map-get($colors, 2);
+  font-size: 15px;
+  padding: 20px;
+  text-align: center;
+  h2 {
+    display: none;
+  }
+}

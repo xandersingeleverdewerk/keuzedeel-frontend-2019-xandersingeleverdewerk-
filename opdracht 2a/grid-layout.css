@@ -1,0 +1,540 @@
+.container {
+    display: inline-grid;
+    grid-template-columns: repeat(8, 100px);
+    grid-template-rows: repeat(8, 100px);
+    border-bottom: solid black;
+    border-left: solid black;
+    border-right: solid black;
+}
+
+.item1 {
+    background-color: orange;
+    padding: 1rem;
+    grid-row: 1/2;
+    grid-column: 1/2;
+    border-bottom: solid black;
+    border-right: solid black;
+    border-top: solid black;
+}
+
+.item2 {
+    background-color: red;
+    padding: 1rem;
+    grid-row: 1/2;
+    grid-column: 4/5;
+    border-left: solid black;
+    border-top: solid black;
+    border-bottom: solid black;
+}
+
+.item3 {
+    background-color: red;
+    padding: 1rem;
+    grid-row: 1/2;
+    grid-column: 5/6;
+    border: solid black;
+}
+
+.item4 {
+    background-color: orange;
+    padding: 1rem;
+    grid-row: 1/2;
+    grid-column: 8/9;
+    border-top: solid black;
+    border-bottom: solid black;
+    border-left: solid black;
+}
+
+.item5 {
+    background-color: orange;
+    padding: 1rem;
+    grid-row: 2/3;
+    grid-column: 1/2;
+    border-right: solid black;
+    border-bottom: solid black;
+}
+
+.item6 {
+    background-color: orange;
+    padding: 1rem;
+    grid-row: 2/3;
+    grid-column: 2/3;
+    border-top: solid black;
+    border-right: solid black;
+    border-bottom: solid black;
+}
+
+.item7 {
+    background-color: blue;
+    padding: 1rem;
+    grid-row: 2/3;
+    grid-column: 3/4;
+    border-top: solid black;
+    border-right: solid black;
+    border-bottom: solid black;
+}
+
+.item8 {
+    background-color: blue;
+    padding: 1rem;
+    grid-row: 2/3;
+    grid-column: 4/5;
+    border-right: solid black;
+    border-bottom: solid black;
+}
+
+.item9 {
+    background-color: red;
+    padding: 1rem;
+    grid-row: 2/3;
+    grid-column: 5/6;
+    border-right: solid black;
+    border-bottom: solid black;
+}
+
+.item10 {
+    background-color: red;
+    padding: 1rem;
+    grid-row: 2/3;
+    grid-column: 6/7;
+    border-right: solid black;
+    border-bottom: solid black;
+    border-top: solid black;
+}
+
+.item11 {
+    background-color: orange;
+    padding: 1rem;
+    grid-row: 2/3;
+    grid-column: 7/8;
+    border-right: solid black;
+    border-bottom: solid black;
+    border-top: solid black;
+}
+
+.item12 {
+    background-color: orange;
+    padding: 1rem;
+    grid-row: 2/3;
+    grid-column: 8/9;
+    border-bottom: solid black;
+}
+
+.item13 {
+    background-color: orange;
+    padding: 1rem;
+    grid-row: 3/4;
+    grid-column: 1/2;
+    border-right: solid black;
+    border-bottom: solid black;
+}
+
+.item14 {
+    background-color: red;
+    padding: 1rem;
+    grid-row: 3/4;
+    grid-column: 2/3;
+    border-right: solid black;
+    border-bottom: solid black;
+}
+
+.item15 {
+    background-color: blue;
+    padding: 1rem;
+    grid-row: 3/4;
+    grid-column: 3/4;
+    border-right: solid black;
+    border-bottom: solid black;
+}
+
+.item16 {
+    background-color: blue;
+    padding: 1rem;
+    grid-row: 3/4;
+    grid-column: 4/5;
+    border-right: solid black;
+    border-bottom: solid black;
+}
+
+.item17 {
+    background-color: green;
+    padding: 1rem;
+    grid-row: 3/4;
+    grid-column: 5/6;
+    border-right: solid black;
+    border-bottom: solid black;
+}
+
+.item18 {
+    background-color: green;
+    padding: 1rem;
+    grid-row: 3/4;
+    grid-column: 6/7;
+    border-right: solid black;
+    border-bottom: solid black;
+}
+
+.item19 {
+    background-color: green;
+    padding: 1rem;
+    grid-row: 3/4;
+    grid-column: 7/8;
+    border-right: solid black;
+    border-bottom: solid black;
+}
+
+.item20 {
+    background-color: orange;
+    padding: 1rem;
+    grid-row: 3/4;
+    grid-column: 8/9;
+    border-bottom: solid black;
+}
+
+.item21 {
+    background-color: red;
+    padding: 1rem;
+    grid-row: 4/5;
+    grid-column: 1/2;
+    border-right: solid black;
+    border-bottom: solid black;
+}
+
+.item22 {
+    background-color: red;
+    padding: 1rem;
+    grid-row: 4/5;
+    grid-column: 2/3;
+    border-right: solid black;
+    border-bottom: solid black;
+}
+
+.item23 {
+    background-color: yellow;
+    padding: 1rem;
+    grid-row: 4/5;
+    grid-column: 3/4;
+    border-right: solid black;
+    border-bottom: solid black;
+}
+
+.item24 {
+    background-color: yellow;
+    padding: 1rem;
+    grid-row: 4/5;
+    grid-column: 4/5;
+    border-right: solid black;
+    border-bottom: solid black;
+}
+
+.item25 {
+    background-color: yellow;
+    padding: 1rem;
+    grid-row: 4/5;
+    grid-column: 5/6;
+    border-right: solid black;
+    border-bottom: solid black;
+}
+
+.item26 {
+    background-color: yellow;
+    padding: 1rem;
+    grid-row: 4/5;
+    grid-column: 6/7;
+    border-right: solid black;
+    border-bottom: solid black;
+}
+
+.item27 {
+    background-color: green;
+    padding: 1rem;
+    grid-row: 4/5;
+    grid-column: 7/8;
+    border-right: solid black;
+    border-bottom: solid black;
+}
+
+.item28 {
+    background-color: yellow;
+    padding: 1rem;
+    grid-row: 4/5;
+    grid-column: 8/9;
+    border-bottom: solid black;
+}
+
+.item29 {
+    background-color: red;
+    padding: 1rem;
+    grid-row: 5/6;
+    grid-column: 1/2;
+    border-right: solid black;
+    border-bottom: solid black;
+}
+
+.item30 {
+    background-color: orange;
+    padding: 1rem;
+    grid-row: 5/6;
+    grid-column: 2/3;
+    border-right: solid black;
+    border-bottom: solid black;
+}
+
+.item31 {
+    background-color: orange;
+    padding: 1rem;
+    grid-row: 5/6;
+    grid-column: 3/4;
+    border-right: solid black;
+    border-bottom: solid black;
+}
+
+.item32 {
+    background-color: orange;
+    padding: 1rem;
+    grid-row: 5/6;
+    grid-column: 4/5;
+    border-right: solid black;
+    border-bottom: solid black;
+}
+
+.item33 {
+    background-color: red;
+    padding: 1rem;
+    grid-row: 5/6;
+    grid-column: 5/6;
+    border-right: solid black;
+    border-bottom: solid black;
+}
+
+.item34 {
+    background-color: blue;
+    padding: 1rem;
+    grid-row: 5/6;
+    grid-column: 6/7;
+    border-right: solid black;
+    border-bottom: solid black;
+}
+
+.item35 {
+    background-color: blue;
+    padding: 1rem;
+    grid-row: 5/6;
+    grid-column: 7/8;
+    border-right: solid black;
+    border-bottom: solid black;
+}
+
+.item36 {
+    background-color: yellow;
+    padding: 1rem;
+    grid-row: 5/6;
+    grid-column: 8/9;
+    border-bottom: solid black;
+}
+
+.item37 {
+    background-color: green;
+    padding: 1rem;
+    grid-row: 6/7;
+    grid-column: 1/2;
+    border-right: solid black;
+    border-bottom: solid black;
+}
+
+.item38 {
+    background-color: green;
+    padding: 1rem;
+    grid-row: 6/7;
+    grid-column: 2/3;
+    border-right: solid black;
+    border-bottom: solid black;
+}
+
+.item39 {
+    background-color: orange;
+    padding: 1rem;
+    grid-row: 6/7;
+    grid-column: 3/4;
+    border-right: solid black;
+    border-bottom: solid black;
+}
+
+.item40 {
+    background-color: red;
+    padding: 1rem;
+    grid-row: 6/7;
+    grid-column: 4/5;
+    border-right: solid black;
+    border-bottom: solid black;
+}
+
+.item41 {
+    background-color: red;
+    padding: 1rem;
+    grid-row: 6/7;
+    grid-column: 5/6;
+    border-right: solid black;
+    border-bottom: solid black;
+}
+
+.item42 {
+    background-color: blue;
+    padding: 1rem;
+    grid-row: 6/7;
+    grid-column: 6/7;
+    border-right: solid black;
+    border-bottom: solid black;
+}
+
+.item43 {
+    background-color: blue;
+    padding: 1rem;
+    grid-row: 6/7;
+    grid-column: 7/8;
+    border-right: solid black;
+    border-bottom: solid black;
+}
+
+.item44 {
+    background-color: yellow;
+    padding: 1rem;
+    grid-row: 6/7;
+    grid-column: 8/9;
+    border-bottom: solid black;
+}
+
+.item45 {
+    background-color: green;
+    padding: 1rem;
+    grid-row: 7/8;
+    grid-column: 1/2;
+    border-right: solid black;
+    border-bottom: solid black;
+}
+
+.item46 {
+    background-color: blue;
+    padding: 1rem;
+    grid-row: 7/8;
+    grid-column: 2/3;
+    border-right: solid black;
+    border-bottom: solid black;
+}
+
+.item47 {
+    background-color: blue;
+    padding: 1rem;
+    grid-row: 7/8;
+    grid-column: 3/4;
+    border-right: solid black;
+    border-bottom: solid black;
+}
+
+.item48 {
+    background-color: red;
+    padding: 1rem;
+    grid-row: 7/8;
+    grid-column: 4/5;
+    border-right: solid black;
+    border-bottom: solid black;
+}
+
+.item49 {
+    background-color: orange;
+    padding: 1rem;
+    grid-row: 7/8;
+    grid-column: 5/6;
+    border-right: solid black;
+    border-bottom: solid black;
+}
+
+.item50 {
+    background-color: red;
+    padding: 1rem;
+    grid-row: 7/8;
+    grid-column: 6/7;
+    border-right: solid black;
+    border-bottom: solid black;
+}
+
+.item51 {
+    background-color: red;
+    padding: 1rem;
+    grid-row: 7/8;
+    grid-column: 7/8;
+    border-right: solid black;
+    border-bottom: solid black;
+}
+
+.item52 {
+    background-color: yellow;
+    padding: 1rem;
+    grid-row: 7/8;
+    grid-column: 8/9;
+    border-bottom: solid black;
+}
+
+.item53 {
+    background-color: green;
+    padding: 1rem;
+    grid-row: 8/9;
+    grid-column: 1/2;
+    border-right: solid black;
+
+}
+
+.item54 {
+    background-color: blue;
+    padding: 1rem;
+    grid-row: 8/9;
+    grid-column: 2/3;
+    border-right: solid black;
+}
+
+.item55 {
+    background-color: blue;
+    padding: 1rem;
+    grid-row: 8/9;
+    grid-column: 3/4;
+    border-right: solid black;
+}
+
+.item56 {
+    background-color: orange;
+    padding: 1rem;
+    grid-row: 8/9;
+    grid-column: 4/5;
+    border-right: solid black;
+}
+
+.item57 {
+    background-color: orange;
+    padding: 1rem;
+    grid-row: 8/9;
+    grid-column: 5/6;
+    border-right: solid black;
+}
+
+.item58 {
+    background-color: orange;
+    padding: 1rem;
+    grid-row: 8/9;
+    grid-column: 6/7;
+    border-right: solid black;
+}
+
+.item59 {
+    background-color: red;
+    padding: 1rem;
+    grid-row: 8/9;
+    grid-column: 7/8;
+    border-right: solid black;
+}
+
+.item60 {
+    background-color: red;
+    padding: 1rem;
+    grid-row: 8/9;
+    grid-column: 8/9;
+}

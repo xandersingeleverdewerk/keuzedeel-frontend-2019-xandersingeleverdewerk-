@@ -1,0 +1,128 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 1270px;
+    height: 520px;
+    margin: 40px 40px 80px 40px;
+}
+
+.red-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 100%;
+    width: 32%;
+    margin-right: 2%;
+    background-color: red;
+}
+
+.item-block-red {
+    width: 25%;
+    height: 25%;
+    margin-top: 7.5%;
+    text-align: center;
+    line-height: 18.75%;
+    font-size: 45%;
+}
+
+.righter-block {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    height: 100%;
+    width: 66%;
+    margin-left: 2%;
+}
+
+.blue-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    height: 44%;
+    background-color: blue;
+}
+
+.item-block-blue {
+    width: 12.5%;
+    height: 12.5%;
+    margin-top: 6.5%;
+    margin-right: 3.125%;
+    margin-left: 3.125%;
+    text-align: center;
+    line-height: 9.375%;
+    font-size: 22.5%;
+}
+
+.inner-block {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 44%;
+    margin-top: 7%;
+}
+
+.orange-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 47.5%;
+    height: 100%;
+    background-color: orange;
+}
+
+.item-block-orange {
+    width: 17%;
+    height: 25%;
+    margin-top: 2.5%;
+    margin-right: 2.5%;
+    margin-left: 2.5%;
+    text-align: center;
+    line-height: 18.75%;
+    font-size: 45%;
+}
+
+.right-inner-block-container-group {
+    display: flex;
+    flex-direction: column;
+    width: 47.5%;
+    height: 100%;
+    margin-left: 7%;
+    justify-content: space-between;
+}
+
+.green-container {
+    height:47%;
+    width: 100%;
+    background-color: green;
+}
+
+.green-sub-container1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.item-block-green1 {
+    width: 20.5%;
+    height: 25%;
+    margin-top: 3.5%;
+    text-align: center;
+    line-height: 18.75%;
+    font-size: 45%;
+}
+
+.green-sub-container2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.item-block-green2 {
+    width: 20.5%;
+    height: 25%;
+    margin-top: 3.5%;
+    text-align: center;
+    line-height: 18.75%;
+    font-size: 45%;
+}
