@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: 404.html
+Disallow: img/book1.png
+Disallow: img/open_book_side2.png
+Disallow: img/open_book.png
