@@ -1,0 +1,273 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  @if $font-family2 == sans-serif {
+    font-family: Arial, sans-serif;
+  } @else if  $font-family2 == serif {
+    font-family: Arial, serif;
+  } @else {
+    font-family: Georgia, serif;
+  }
+  margin: 1px - 1px;
+}
+
+html {
+  @extend body
+}
+
+h1,h2,p {
+  font-family: $font-family3;
+  margin: 1px - 1px;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+#title {
+  color: map-get($colors, 2);
+  font: {
+    family: $font-family1;
+    size: (12pt * 2);
+    weight: normal;
+  }
+}
+
+header {
+  &#header {
+    display: flex;
+    align-items: $text-align;
+    justify-content: $text-align;
+    grid-area: header;
+    background-color: #111;
+    color: #fff;
+    padding: 0 2%;
+  }
+}
+
+nav {
+  &#nav {
+    grid-area: nav;
+    display: flex;
+    justify-content: space + "-between";
+    a {
+      color: map-get($colors, 1);
+      text-decoration: none;
+      text-transform: $text-transform;
+      font: {
+        family: $font-family4;
+        weight: bold;
+        size: 12pt;
+      }
+    }
+    h1 {
+      display: none;
+    }
+  }
+}
+
+$i: 1;
+
+@while $i < 2 {
+  li {
+    display: flex;
+    margin-bottom: 14px * $i;
+    $i: $i + 1;
+  }
+}
+
+main {
+  &#information {
+    grid-area: information;
+
+    article {
+      position: relative;
+      margin-bottom: 20px;
+
+      & #info {
+        position: absolute;
+        color: map-get($colors, 1);
+        padding: 10px;
+      }
+    }
+  }
+  h2 {
+    font: {
+      size: 18pt;
+      weight: bold;
+    }
+    margin-top: 2%;
+    color: map-get($colors, 1);
+    text-align: $text-align;
+  }
+  p {
+    font: {
+      size: 12pt;
+      weight: normal;
+    }
+    margin-top: 2%;
+    line-height: 140%;
+    word-wrap: break-word;
+  }
+
+}
+
+div {
+  &#container {
+    display: grid;
+    grid-gap: 14px;
+    grid: {
+      template-columns: 2fr 23fr 50fr 23fr 2fr;
+      template-rows: auto;
+      template-areas:
+              "header header header header header"
+              ". . nav . ."
+              ". tutorialList information testList ."
+              "aside aside aside aside aside"
+              "footer footer footer footer footer"
+    }
+  }
+}
+
+asi {
+  &de {
+    grid-area: aside;
+    color: map-get($colors, 1);
+    font: {
+      size: 12pt;
+      weight: normal;
+    }
+    padding: 20px;
+    margin-top:6.9%;
+    text-align: center;
+  }
+  &de h2 {
+    display: none
+  }
+}
+
+@for $i from 1 to 2 {
+  footer {
+    grid-area: footer;
+    background-color: #161616;
+    color: map-get($colors, 2);
+    font: {
+      size: 12pt;
+      weight: normal;
+    }
+    padding: 23.4px;
+    text-align: center;
+    h2 {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  div {
+    & .container-group {
+      grid-area: container-group;
+      display: flex;
+      justify-content: space-between;
+      width: 1200px;
+      height: 15%;
+      position: relative;
+      top: 62px;
+      left: 11.09%;
+      transform: translate(-50%,-50%);
+      perspective: 1000px;
+      animation: {
+        name: move;
+        duration: 5s;
+        fill-mode: forwards;
+      }
+    }
+    &.container1 {
+      width: 71px;
+      height: 50px;
+      background: url(/img/open_book_side2.png);
+      position: relative;
+      top: -620%;
+      left: 47%;
+      transform: translate(-50%,-50%);
+      perspective: 1000px;
+      animation: {
+        name: spin;
+        duration: 5s;
+        timing-function: linear;
+      }
+    }
+    .container1:hover .cover {
+      transform: rotateY(-180deg);
+    }
+    &.cover {
+      width: 70px;
+      height: $width;
+      position: absolute;
+      left: 0;
+      background-color: #345b8c;
+      transform:rotateY(0deg);
+      transform-style: preserve-3d;
+      transform-origin: left;
+      transition: all .5s ease-in;
+      animation-timing-function: linear;
+    }
+    &#container {
+      display: grid;
+      grid-gap: 14px;
+      grid: {
+        template-columns: 2fr 23fr 50fr 23fr 2fr;
+        template-rows: auto;
+        template-areas:
+                "header header header header header"
+                "container-group container-group container-group container-group container-group"
+                ". . nav . ."
+                ". information information information ."
+                "aside aside aside aside aside"
+                "footer footer footer footer footer"
+      }
+    }
+    @keyframes move {
+      from  {top:120%;}
+      to    {top: 597px;}
+    }
+    @keyframes spin {
+      from {
+        transform:rotate(0deg);
+      }
+      to {
+        transform:rotate(360deg);
+        top:-75px;
+      }
+    }
+  }
+  figure {
+    margin: 0;
+    display: block;
+    position: absolute;
+    width: $width;
+    height: $width;
+    backface-visibility: hidden;
+    &.front {
+      background: url(/img/book1.png);
+    }
+    &.back {
+      background: url(/img/open_book_side2.png);
+      transform: rotateY(180deg);
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  nav {
+    &#nav{
+      flex-direction: column;
+      align-items: center;
+      line-height: 140%;
+    }
+  }
+}

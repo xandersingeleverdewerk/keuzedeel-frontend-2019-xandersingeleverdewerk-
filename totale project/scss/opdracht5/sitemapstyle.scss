@@ -1,0 +1,140 @@
+body {
+  background-color: map-get($colors, 1);
+  @if $font-family1 == sans-serif {
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  } @else if  $font-family1 == serif {
+    font-family: "Roboto", "Helvetica", "Arial", serif;
+  } @else {
+    font-family: "Roboto", "Helvetica", "Georgia", serif;
+  }
+  margin: 1px - 1px;
+}
+
+html {
+  @extend body;
+}
+
+h {
+  &1{
+    margin: {
+      top: auto;
+      right: auto;
+      bottom: (1%*1);
+      left: auto;
+    }
+    padding: $padding;
+    max-width: 1000px - 100;
+    color: #575757;
+    span {
+      float: right;
+    }
+    a {
+      font-weight: normal;
+      display: block;
+    }
+  }
+}
+
+a {
+  &:link {
+    color: map-get($colors, 2);
+    text-decoration: $text-decoration;
+  }
+  &:visited {
+    color: map-get($colors, 2);
+    text-decoration: $text-decoration;
+  }
+  &:hover {
+    color: map-get($colors, 3);
+  }
+}
+
+$child: "#footer";
+div {
+  &#top {
+    background-color: #b1d1e8;
+    font-size: 16px;
+    padding-bottom: 40px;
+  }
+  &#cont {
+    position: relative;
+    border-radius: $border;
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+    background: #f3f3f3;
+    margin: {
+      top: -20px;
+      right: 30px;
+      bottom: 0;
+      left: 30px;
+    }
+    padding: 20px;
+  }
+  &#{$child} {
+    padding: $padding;
+    text-align: center;
+  }
+}
+
+nav {
+  font-size: (48px / 2);
+  margin: 0 30px 0;
+  border: {
+    bottom-left-radius: $border;
+    bottom-right-radius: $border;
+  }
+  background-color: #f3f3f3;
+  color: map-get($colors, 3);
+  box-shadow: 0 10px 20px -12px rgba(0, 0, 0, 0.42), 0 3px 20px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+  padding: $padding 0;
+  text-align: center;
+  z-index: 1;
+}
+
+$i: 1;
+
+@while $i <2  {
+  ul {
+    margin: (0 * $i);
+    padding: (0 * $i);
+    list-style: none;
+    $i: $i + 1;
+  }
+}
+
+li {
+  margin: 0;
+  background-color: #fcfcfc;
+  ul {
+    margin-left: 20px;
+  }
+  &.lhead {
+    background: #ddd;
+    padding: $padding;
+    margin: 10px 0;
+  }
+  &.lpage {
+    border-bottom: #ddd 1px solid;
+    padding: 5px;
+  }
+  &.last-page {
+    border: none;
+  }
+}
+
+@for $i from 1 to 2 {
+  span {
+    &.lcount {
+      padding: 0 $padding;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px){
+  main {
+    body {
+      background-color: map-get($colors, 1);
+      font-family: $font-family1;
+      margin: 1px - 1px;
+    }
+  }
+}

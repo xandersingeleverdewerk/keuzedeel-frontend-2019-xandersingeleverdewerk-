@@ -1,0 +1,21 @@
+User-agent: *
+Disallow: 404.html
+Disallow: img/book1.png
+Disallow: img/open_book_side2.png
+Disallow: img/open_book.png
+Disallow scss/404.scss
+Disallow scss/home.scss
+Disallow scss/sitemap.scss
+Disallow scss/vak.scss
+Disallow scss/opdracht5/vak.scss
+Disallow scss/opdracht5/vakstyle.scss
+Disallow scss/opdracht5/sitemapstyle.scss
+Disallow scss/opdracht5/sitemap.scss
+Disallow scss/opdracht5/homestyle.scss
+Disallow scss/opdracht5/home.scss
+Disallow scss/opdracht5/404.scss
+Disallow scss/opdracht5/404style.scss
+Disallow robots.txt
+Disallow .htacces
+Disallow sitemap.xml
+

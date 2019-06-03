@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+h1, h2, p {
+  font-family: "Arial Narrow", sans-serif;
+  margin: 0;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+#title {
+  color: yellow;
+  font-family: "Arial Black", "Arial Narrow", sans-serif;
+  font-size: 24pt;
+  font-weight: normal;
+}
+
+header#header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-area: header;
+  background-color: #111;
+  padding: 0 2%;
+}
+
+nav#nav {
+  grid-area: nav;
+  display: flex;
+  justify-content: space-between;
+}
+nav#nav a {
+  color: #242424;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Arial Narrow", Arial;
+  font-size: 12pt;
+  font-weight: bold;
+}
+nav#nav h2 {
+  display: none;
+}
+
+li {
+  display: flex;
+  margin-bottom: 14px;
+}
+
+main#information {
+  grid-area: information;
+}
+main#information article {
+  position: relative;
+  margin-top: 20px;
+}
+main#information article #info {
+  position: absolute;
+  color: #242424;
+  padding: 10px;
+}
+main h2 {
+  font-size: 18pt;
+  font-weight: bold;
+  color: #242424;
+  text-align: center;
+}
+main p {
+  font-size: 12pt;
+  font-weight: normal;
+  line-height: 140%;
+  word-wrap: break-word;
+}
+main p.error-404-p {
+  text-align: center;
+}
+
+div#container {
+  display: grid;
+  grid-gap: 14px;
+  grid-template-columns: 2fr 23fr 50fr 23fr 2fr;
+  grid-template-rows: auto;
+  grid-template-areas: "header header header header header" ". . nav . ." ". information information information ." "aside aside aside aside aside" "footer footer footer footer footer";
+}
+
+figure {
+  margin: 0;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+aside {
+  grid-area: aside;
+  color: #242424;
+  font-size: 12pt;
+  font-weight: normal;
+  padding: 20px;
+  margin-top: 25%;
+  text-align: center;
+}
+aside h2 {
+  display: none;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #161616;
+  color: yellow;
+  font-size: 12pt;
+  font-weight: normal;
+  padding: 1.55%;
+  text-align: center;
+}
+footer h2 {
+  display: none;
+}
+
+
+@media screen and (max-width: 1000px) {
+
+  nav#nav {
+    flex-direction: column;
+    align-items: center;
+    line-height: 140%;
+  }
+  aside {
+    margin-top: 54%;
+  }
+  div#container {
+    grid-template-areas: "header header header header header" ". .  nav .  ." "information information information information information" "aside aside aside aside aside" "footer footer footer footer footer";
+  }
+}
+  

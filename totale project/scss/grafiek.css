@@ -1,0 +1,467 @@
+body, p {
+  color: #000;
+}
+
+div.container.main {
+  position: relative;
+  width: 980px;
+  margin: 0 auto;
+  grid-area: main;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.12);
+  background: #fff;
+}
+div.clearfix {
+  clear: both;
+  float: none !important;
+}
+div#container {
+  display: grid;
+  grid-gap: 14px;
+  grid-template-columns: 2fr 23fr 50fr 23fr 2fr;
+  grid-template-rows: auto;
+  grid-template-areas: "header header header header header" ". . nav . ." ". main main main ." "aside aside aside aside aside" "footer footer footer footer footer";
+}
+div.inner {
+  padding: 0 20px;
+}
+div.inner-double {
+  padding: 0 40px;
+}
+div.outer-round {
+  margin: 20px;
+}
+div.right {
+  float: right !important;
+}
+div.no-overflow {
+  overflow: hidden;
+}
+div.two-column {
+  width: 400px;
+}
+div.blue-border {
+  border: 2px solid #acd8ef;
+  margin-bottom: 30px;
+}
+div.bar-graph {
+  position: relative;
+}
+div.bar-graph .side-data .mil {
+  position: relative;
+}
+div#content {
+  background: #fff;
+  margin-top: 100px;
+}
+
+.hover-popup:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+  width: 22px;
+  margin-left: -11px;
+  height: 10px;
+  z-index: 5;
+}
+
+body, html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #f2f8fc;
+  font-family: sans-serif;
+}
+
+p {
+  font: normal normal 0.9375em/1.3 sans-serif;
+  margin: 0 0 1em;
+}
+
+a {
+  color: #005690;
+  text-decoration: underline;
+}
+
+h3 {
+  font: 700 1em sans-serif;
+  color: #000;
+  margin: 0 0 1em;
+}
+
+header#header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-area: header;
+  background-color: #111;
+  padding: 0 2%;
+}
+
+#title {
+  color: yellow;
+  font-family: "Arial Black", "Arial Narrow", sans-serif;
+  font-size: 24pt;
+  font-weight: normal;
+}
+
+nav#nav {
+  margin-top: 20px;
+  grid-area: nav;
+  display: flex;
+  justify-content: space-between;
+}
+nav#nav a {
+  color: #242424;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Arial Narrow", Arial;
+  font-weight: bold;
+  font-size: 12pt;
+}
+nav#nav h2 {
+  display: none;
+}
+
+.left {
+  float: left !important;
+}
+
+.home h2, h2 {
+  font: 700 1.375em/1.2 sans, sans-serif;
+  color: #0d4376;
+  margin-top: 0.83em;
+}
+
+h2 {
+  font-weight: 400;
+  margin-top: 0;
+}
+
+.home .cijfers h2 {
+  font-weight: 400;
+  float: left;
+}
+
+.bar-graph p {
+  font-size: 0.875em;
+}
+
+.bar-graph .side-data {
+  width: 65px;
+  text-align: right;
+  margin-right: 10px;
+}
+
+.bar-graph .side-data .data-top {
+  line-height: 20px;
+  font-weight: 700;
+  margin: 20px 0 0;
+}
+
+.bar-graph .side-data .number-list {
+  padding-top: 25px;
+}
+
+.bar-graph .side-data .mil p {
+  line-height: 10px;
+  margin-bottom: 48px;
+}
+
+.bar-graph .side-data .graph-line {
+  position: absolute;
+  left: 75px;
+  top: 4px;
+  height: 1px;
+  background: #e5f1f9;
+  width: 760px;
+}
+
+.bar-graph .graph-content {
+  margin: 40px 15px 30px;
+  width: 740px;
+  border-spacing: 0;
+  border-collapse: collapse;
+  position: relative;
+}
+
+.bar-graph .bar {
+  width: 40px;
+  background: #f2f8fc;
+  vertical-align: bottom;
+  height: 575px;
+  padding-top: 30px;
+  position: relative;
+}
+
+.bar-graph .bar:hover {
+  z-index: 5;
+}
+
+.bar-graph .bar-outer {
+  margin: 0 0 0 27px;
+  margin-left: 1vw;
+}
+
+.bar-graph .bar .vak-name {
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  width: 40px;
+  text-align: center;
+}
+
+.home .bar-graph .vakken-title {
+  bottom: 14px;
+  position: absolute;
+  left: 700px;
+  font-weight: 700;
+  top: auto;
+  font-size: 0.875em;
+}
+
+.bar-graph .bar > a {
+  display: block;
+  width: 100%;
+  background: #242424;
+  position: relative;
+  box-sizing: border-box;
+  border-bottom: 1px solid #fff;
+  margin-bottom: -1px;
+  margin-top: 1px;
+}
+
+.bar-graph .bar .vak-name h3 {
+  font-size: 0.875em;
+  font-weight: 400;
+}
+
+.bar-graph .bar a:focus .hover-container, .bar-graph .bar a:hover .hover-container, .help-icon:focus .hover-container .help-icon:hover .hover-container {
+  left: 50%;
+}
+
+.hover-container {
+  position: absolute;
+  z-index: 6;
+  top: -63px;
+  overflow: visible;
+  left: -9999px;
+  height: 0;
+}
+
+.hover-popup {
+  white-space: nowrap;
+  position: relative;
+  z-index: 5;
+  left: -50%;
+  display: block;
+  background: #fff;
+  border: 2px solid #b1d7ef;
+  padding: 10px;
+}
+
+.hover-popup p {
+  color: #005690;
+}
+
+.homepage-graph .hover-popup h3, .homepage-graph .hover-popup p {
+  color: #000;
+  font-size: 0.875em;
+  margin: 0;
+}
+
+.help-icon {
+  display: inline-block;
+  height: 14px;
+  width: 14px;
+  cursor: help;
+  font-size: 0.875em;
+  top: 2px;
+}
+
+.graph, .help-icon {
+  position: relative;
+}
+
+.help-icon.home-help {
+  float: left;
+  margin: 25px 0 0 6px;
+}
+
+.graph h2 {
+  position: absolute;
+  top: 0;
+  left: 40px;
+  z-index: 2;
+}
+
+.scroll-indicator {
+  display: none;
+}
+
+aside {
+  grid-area: aside;
+  color: #242424;
+  font-size: 12pt;
+  font-weight: normal;
+  padding: 20px;
+  margin-top: 6.9%;
+  text-align: center;
+}
+
+aside h2 {
+  display: none;
+}
+
+footer, footer p {
+  grid-area: footer;
+  background-color: #161616;
+  color: yellow;
+  font-size: 12pt;
+  font-weight: normal;
+  padding: 1.55%;
+  text-align: center;
+}
+
+footer h2 {
+  display: none;
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .two-column {
+    width: 50%;
+  }
+
+  .home .bar-graph .bar-outer {
+    margin-left: 2.1vw;
+  }
+}
+@keyframes a {
+  0% {
+    left: -5px;
+  }
+  to {
+    left: 5px;
+  }
+}
+@media (max-width: 992px) {
+  a, h2, h3, p, span, td {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  p {
+    line-height: 1.3;
+    font-size: 0.875em;
+  }
+
+  div.container {
+    width: 100%;
+  }
+  div#content {
+    padding-bottom: 0;
+  }
+  div.scroll-indicator {
+    width: 100%;
+    display: inline-block;
+    padding: 10px 34px;
+    margin-bottom: 10px;
+    background-color: #e5f1f9;
+    text-align: center;
+  }
+  div.scroll-indicator span {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  div.scroll-indicator .icon {
+    position: absolute;
+    left: 0;
+    height: 25px;
+    width: 32px;
+    animation: a 1s infinite alternate ease-in-out;
+  }
+  div.scroll-indicator .text {
+    padding-left: 47px;
+    font-size: 16px;
+    line-height: 25px;
+    color: #0d4376;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  div.help-icon {
+    width: 20px;
+    height: 20px;
+    background-position: 0;
+    background-size: 100%;
+    top: 4px;
+  }
+  div.help-icon .home-help {
+    margin-top: 18px;
+  }
+  div.graph.homepage-graph a:hover {
+    cursor: pointer;
+  }
+  div.graph .no-overflow {
+    padding-top: 43px;
+    margin-right: -20px;
+    overflow-y: hidden;
+    overflow-x: scroll !important;
+  }
+  div.graph .graph-content {
+    position: absolute;
+    left: 80px;
+    bottom: 30px;
+  }
+  div.graph .hover-container {
+    display: block;
+    width: 295px;
+  }
+  div.graph .hover-container .hover-popup {
+    white-space: normal;
+  }
+  div.home .bar-graph .bar-outer {
+    margin-left: 2vw;
+  }
+}
+@media screen and (max-width: 1000px) {
+  nav#nav {
+    flex-direction: column;
+    align-items: center;
+    line-height: 140%;
+  }
+}
+@media (max-width: 767px) {
+  div.two-column {
+    width: 100%;
+  }
+  div.inner-double {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  div#content .home {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  div#content .home .page-content {
+    -ms-flex-order: 2;
+    order: 2;
+  }
+  div#content .home .cijfers {
+    -ms-flex-order: 3;
+    order: 3;
+  }
+}
+
+/*# sourceMappingURL=grafiek.css.map */

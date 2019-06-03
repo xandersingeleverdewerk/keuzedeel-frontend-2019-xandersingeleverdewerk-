@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  @if $font-family2 == sans-serif {
+    font-family: Arial, sans-serif;
+  } @else if  $font-family2 == serif {
+    font-family: Arial, serif;
+  } @else {
+    font-family: Georgia, serif;
+  }
+  margin: 1px - 1px;
+}
+
+html {
+  @extend body
+}
+
+h1,h2,p {
+  font-family: $font-family3;
+  margin: 1px - 1px;
+}
+
+#title {
+  color: map-get($colors, 2);
+  font: {
+    family: $font-family1;
+    size: (12pt * 2);
+    weight: normal;
+  }
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+header {
+  &#header {
+    display: flex;
+    align-items: $text-align;
+    justify-content: $text-align;
+    grid-area: header;
+    background-color: #111;
+    padding: 0 2%;
+  }
+}
+
+nav {
+  &#nav {
+    grid-area: nav;
+    display: flex;
+    justify-content: space + "-between";
+    a {
+      color: map-get($colors, 1);
+      text-decoration: none;
+      text-transform: $text-transform;
+      font: {
+        family: $font-family4;
+        size: 12pt;
+        weight: bold;
+      }
+    }
+    h2 {
+      display: none;
+    }
+  }
+}
+
+$i: 1;
+
+@while $i < 2 {
+  li {
+    display: flex;
+    margin-bottom: 14px * $i;
+    $i: $i + 1;
+  }
+}
+
+main {
+  &#information {
+    grid-area: information;
+    article {
+      position: relative;
+      margin-bottom: 20px;
+      & #info {
+        position: absolute;
+        color: map-get($colors, 1);
+        padding: 10px;
+      }
+    }
+  }
+  h2 {
+    font: {
+      size: 18pt;
+      weight: bold;
+    }
+    color: map-get($colors, 1);
+    text-align: $text-align;
+  }
+  p {
+    font: {
+      size: 12pt;
+      weight: normal;
+    }
+    line-height: 140%;
+    word-wrap: break-word;
+  }
+  p.error-404-p {
+    text-align: $text-align;
+  }
+}
+
+div {
+  &#container {
+    display: grid;
+    grid-gap: 14px;
+    grid: {
+      template-columns: 2fr 23fr 50fr 23fr 2fr;
+      template-rows: auto;
+      template-areas:
+              "header header header header header"
+              ". . nav . ."
+              ". tutorialList information testList ."
+              "aside aside aside aside aside"
+              "footer footer footer footer footer"
+    }
+  }
+}
+
+figure {
+  margin: 0;
+  display: block;
+  position: absolute;
+  width: $width;
+  height: $width;
+  backface-visibility: hidden;
+}
+
+asi {
+  &de {
+    grid-area: aside;
+    color: map-get($colors, 1);
+    font: {
+      size: 12pt;
+      weight: normal;
+    }
+    padding: 20px;
+    margin-top: 4.5%;
+    text-align: center;
+  }
+  &de h2 {
+    display: none
+  }
+}
+
+@for $i from 1 to 2 {
+  footer {
+    grid-area: footer;
+    background-color: #161616;
+    color: map-get($colors, 2);
+    font: {
+      size: 12pt;
+      weight: normal;
+    }
+    padding: 23.4px;
+    text-align: center;
+    h2 {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  nav {
+    &#nav{
+      flex-direction: column;
+      align-items: $text-align;
+      line-height: 140%;
+    }
+  }
+
+  aside {
+    margin-top: 54%;
+  }
+
+  div {
+    &#container {
+      grid-template-areas: "header header header header header" ". .  nav .  ." "information information information information information" "aside aside aside aside aside" "footer footer footer footer footer";
+    }
+  }
+}

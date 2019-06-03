@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: Georgia, serif;
+  margin: 0px;
+}
+
+h1, h2, p {
+  font-family: "Arial Narrow", sans-serif;
+  margin: 0px;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+#title {
+  color: yellow;
+  font-family: "Arial Black", "Arial Narrow", sans-serif;
+  font-size: 24pt;
+  font-weight: normal;
+}
+
+header#header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-area: header;
+  background-color: #111;
+  color: #fff;
+  padding: 0 2%;
+}
+
+nav#nav {
+  grid-area: nav;
+  display: flex;
+  justify-content: space-between;
+}
+nav#nav a {
+  color: #242424;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Arial Narrow", Arial;
+  font-weight: bold;
+  font-size: 12pt;
+}
+nav#nav h1 {
+  display: none;
+}
+
+main#information {
+  grid-area: information;
+}
+main#information article {
+  position: relative;
+  margin-bottom: 20px;
+}
+main#information article #info {
+  position: absolute;
+  color: #242424;
+  padding: 10px;
+}
+main h1 {
+  text-align: center;
+}
+
+div#container {
+  display: grid;
+  grid-gap: 14px;
+  grid-template-columns: 2fr 23fr 50fr 23fr 2fr;
+  grid-template-rows: auto;
+  grid-template-areas: "header header header header header" ". . nav . ." ". tutorialList information testList ." "aside aside aside aside aside" "footer footer footer footer footer";
+}
+
+aside {
+  grid-area: aside;
+  color: #242424;
+  font-size: 15px;
+  padding: 20px;
+  margin-top: 60px;
+  text-align: center;
+}
+aside h2 {
+  display: none;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #222;
+  color: yellow;
+  font-size: 15px;
+  padding: 20px;
+  text-align: center;
+}
+footer h2 {
+  display: none;
+}
+
+@media screen and (min-width: 1300px) {
+  div .container-group {
+    grid-area: container-group;
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    height: 15%;
+    position: relative;
+    top: 62px;
+    left: 11.09%;
+    transform: translate(-50%, -50%);
+    perspective: 1000px;
+    animation-name: move;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+  }
+  div.container1 {
+    width: 71px;
+    height: 50px;
+    background: url(/img/open_book_side2.png);
+    position: relative;
+    top: -620%;
+    left: 47%;
+    transform: translate(-50%, -50%);
+    perspective: 1000px;
+    animation-name: spin;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+  }
+  div .container1:hover .cover {
+    transform: rotateY(-180deg);
+  }
+  div.cover {
+    width: 70px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    background-color: #345b8c;
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+    transform-origin: left;
+    transition: all 0.5s ease-in;
+    animation-timing-function: linear;
+  }
+  div#container {
+    display: grid;
+    grid-gap: 14px;
+    grid-template-columns: 2fr 23fr 50fr 23fr 2fr;
+    grid-template-rows: auto;
+    grid-template-areas: "header header header header header" "container-group container-group container-group container-group container-group" ". . nav . ." ". information information information ." "aside aside aside aside aside" "footer footer footer footer footer";
+  }
+  @keyframes move {
+    from {
+      top: 120%;
+    }
+    to {
+      top: 978%;
+    }
+  }
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+      top: -75px;
+    }
+  }
+
+  figure {
+    margin: 0;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  figure.front {
+    background: url(/img/book1.png);
+  }
+  figure.back {
+    background: url(/img/open_book_side2.png);
+    transform: rotateY(180deg);
+  }
+}
+@media screen and (max-width: 1000px) {
+  nav#nav {
+    flex-direction: column;
+    align-items: center;
+    line-height: 140%;
+  }
+}
+
+/*# sourceMappingURL=404.css.map */
